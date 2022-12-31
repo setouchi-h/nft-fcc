@@ -35,7 +35,16 @@ module.exports = {
         currency: "USD",
         // coinmarketcap: COINMARKETCAP_API_KEY // Whenever we run "gasReporter", it makes an API call to coinmarketcap
     },
-    solidity: "0.8.17",
+    solidity: {
+        compilers: [
+            {
+                version: "0.8.17",
+            },
+            {
+                version: "0.6.6",
+            },
+        ],
+    },
     etherscan: {
         apiKey: {
             goerli: ETHERSCAN_API_KEY,
